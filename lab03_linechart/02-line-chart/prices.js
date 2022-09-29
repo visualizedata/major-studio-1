@@ -40,7 +40,7 @@ d3.csv('data/prices.csv').then(function(data){
     let svg = d3.select("body").append("svg").attr("height","100%").attr("width","100%");
 
 
-    // a graphic that sits within the svg
+    // a graphic that sits within the svg and will hold our line chart
     let chartGroup = svg.append("g")
                 .attr("transform","translate("+margin.left+","+margin.top+")");
 
@@ -65,5 +65,3 @@ d3.csv('data/prices.csv').then(function(data){
     .attr("class","y axis")
     .call(yAxis);
   });
-
-  

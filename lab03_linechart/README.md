@@ -1,18 +1,19 @@
-### Major Studio 1 - Lab 5: SVG, D3
+### Major Studio 1 - Lab 3: Line chart
 
-## [01: SVG Primer](https://readyletsgo.github.io/major-studio-1-fa20/lab05-d3-json/01_svg_primer/)
-Show different ways of using svg  
-
----  
-## [02: D3 SVG data join example](https://readyletsgo.github.io/major-studio-1-fa20/lab05-d3-json/02_d3_svg/)
-- Draw SVG graphics using D3
-- Using data to create the graphics using D3
-- Introducing scales and margins  
-
-
----  
-## [03: D3 UNESCO data](https://munusshih.github.io/dv-majorstudio/lab04_d3_unesco/03_d3_UNESCO/)
-Using a json file created from the UN data portal to create a D3 bar graph using scales, margins and axes  
+## [01: Loading and parsing](https://parsons.nyc/major-studio-1/lab03_linechart/01-loading-parsing/)
+- Load csv data 
+- format csv data
+- To Review:
+    - [Parsing a CSV file](https://www.linkedin.com/learning/d3-js-essential-training-for-data-scientists/parsing-a-csv-file?autoplay=true&resume=false&u=75880858)
+    
+## [02: Line chart](https://parsons.nyc/major-studio-1/lab03_linechart/02-line-chart/)
+- Margins
+- Maximum and minimum values
+- Scale, domain, range
+- Axes
+- Line
+- To Review:
+    - [Drawing a Line Chart](https://www.linkedin.com/learning/d3-js-essential-training-for-data-scientists/drawing-a-line-chart-from-csv-data?autoplay=true&resume=false&u=75880858)
 
 ---  
 ## 04: Putting it all together
@@ -25,8 +26,6 @@ Walk-through Mike Bostock's [Let's Make A Bar](https://observablehq.com/@d3/lets
 
 - Documentation:
     - [Official D3 Project Page](https://d3js.org/)
-    - [MDN SVG Tutorial](https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial)
-- D3 Concepts
     - [Tifffany: Build your first data viz](https://www.pluralsight.com/courses/build-your-first-data-visualization-d3)
     - [Linkedin: D3 Essential training](https://www.linkedin.com/learning/d3-js-essential-training-for-data-scientists/welcome?u=75880858)
      - [D3 Introduction on Observable](https://observablehq.com/collection/@d3/learn-d3)
