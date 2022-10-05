@@ -10,7 +10,3 @@ this example code:
 3. uses d3 to create a `div` for each object and populate it with an image, object date, and title
 
 the resulting HTML is styled with CSS
-
----
-
-`app.js` has comments explaining each step and `app.min.js` is a cleaner filer without comments.
