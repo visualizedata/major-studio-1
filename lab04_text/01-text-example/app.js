@@ -15,8 +15,8 @@ function getInput() {
 function processText(input) {
 
   //output just the text:
-  addText("The text is: " + input);
-  
+  addLetterWithSize("The text is: " + input);
+
   // Task: What's the text length?
 
   // Task: What's the fifth character in the text?
@@ -52,10 +52,10 @@ function addText(text){
 function addLetterWithSize(letter, textSize){
   d3.select('#concretePoetry')
   .append('span')
-  
+
   .text(letter)
-  .style("font-size", textSize+"px")
+  .style("font-size", letter.length*2+"px")
   ;
 }
 
- 
+
