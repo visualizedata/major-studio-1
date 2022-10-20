@@ -50,9 +50,6 @@ function processRita(input) {
       app.append('span')
        .text(" ")  
     }
-
-    word+=" "
-  
 })
 
  }
