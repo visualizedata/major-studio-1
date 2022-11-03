@@ -1,4 +1,4 @@
-* {
+body {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
@@ -25,37 +25,7 @@
   grid-row: 1;
 }
 
-.interactive .filters::before {
-  content: "Filter data by species:";
-  display: block;
-}
 
-.interactive .right-menu {
-  grid-column: 3 / 4;
-  grid-row: 1;
-}
-
-.interactive .right-menu form::before {
-  content: "Size bars by:";
-  display: block;
-}
-
-.interactive .right-menu .legend {
-  margin-top: 20px;
-}
-
-.interactive .right-menu .legend .legend-row {
-  height: 15px;
-}
-.interactive .right-menu .legend .legend-row .box {
-  width: 10px;
-  height: 10px;
-  display: inline-block;
-}
-
-.interactive .right-menu .legend .legend-row .legend-label {
-  display: inline-block;
-}
 
 .interactive .tooltip.visible {
   visibility: visible;
