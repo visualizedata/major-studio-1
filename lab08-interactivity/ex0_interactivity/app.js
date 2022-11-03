@@ -1,5 +1,5 @@
 // ----------------------------------------------------------------------
-// Setting variables
+// Variables
 // -----------------------------------------------------------------------
 
 
@@ -13,13 +13,15 @@ const TOOLTIP_WIDTH =  150;
 const TOOLTIP_HEIGHT =  20;
 
 
-// we can set up our state schema before we have any data
+// this will contain our data set
 let data = [];
 
 let dimensions = [window.innerWidth, window.innerHeight];
 
+// we will have checkbox buttons for each of these
 let checkboxValues = ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica'];
 
+// the state object will contain items that change in runtime and that we want to keep track
 let state = {
   filters: {
     menu: checkboxValues,
@@ -68,7 +70,7 @@ async function dataLoad() {
 // Events
 // -----------------------------------------------------------------------
 
-
+// when a checkbox has changed
 function onCheckboxChange(d) {
   // first, was the clicked box already checked or not?
   // we do this by checking what index it has within the array
@@ -94,8 +96,10 @@ function onCheckboxChange(d) {
   draw();
 }
 
-
+// when a mouse moves over a bar
 function onMouseEvent(d) {
+  
+  // when the cursor rolls over the bar, make the tooltip visible
   if (d3.event.type === "mouseenter") {
     console.log("mouseenter")
     state.tooltip.value = d;
@@ -104,13 +108,14 @@ function onMouseEvent(d) {
       +d3.select(d3.event.target).attr("width") + TOOLTIP_WIDTH / 2 + 10,
       +d3.select(d3.event.target).attr("y") - TOOLTIP_HEIGHT / 2,
     ];
-    
+  // when the cursor moves off the bar, make the tooltip invisible
   } else if (d3.event.type === "mouseleave") {
     console.log("mouseleave")
     state.tooltip.value = "";
     state.tooltip.visible = false;
 
   }
+  // update the visualization
   draw();
 }
 
@@ -151,8 +156,10 @@ function initializeLayout() {
     .attr("class", "axis y-axis")
     .attr("transform", `translate(${margin}, 0)`);
 
+  // add the bars
   svg.append("g").attr("class", "bars");
 
+  // add the tooltip
   const tooltip = svg.append("g").attr("class", "tooltip");
   tooltip
     .append("rect")
@@ -186,6 +193,7 @@ function initializeLayout() {
       <label>${d}</label>
     `
     );
+  // add the checkbox event  
   checkRow.select("input").on("change", onCheckboxChange);
 }
 
@@ -252,8 +260,6 @@ function draw() {
 
 
   }
-
-
 
 // this function is only called once
 dataLoad();
